@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="format-detection" content="address=no" />
-    <meta name="referrer" content="same-origin" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="same-origin">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>postMessage parent</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <script defer src="js/postMessagesParent.js"></script>
 
-    <title>test iframe</title>
-
-    <script>
-      function doClick( text ) {
-        alert( text)
+    <script>  
+      function doClickMessage( that ) {
+        sendMessageToChild("hallo from parent");
       }
     </script>
-
   </head>
   <body class="content">
     <header>
@@ -33,6 +30,7 @@
       <div>
         Footer
       </div>
+      <button onclick="doClickMessage(this)">Click me</button>
     </footer>
   </body>
 </html>

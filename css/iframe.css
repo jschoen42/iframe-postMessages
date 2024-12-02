@@ -47,6 +47,11 @@ main {
   gap: 10px;
 }
 
+.buttonWrapper {
+  display: flex;
+  gap: 20px;
+
+}
 button {
   display: flex;
   justify-content: center;
@@ -61,14 +66,8 @@ button {
 
   transition: all 0.3s;
   cursor: pointer;
-  
 }
 
-.buttonWrapper {
-  display: flex;
-  gap: 20px;
-
-}
 button:hover {
   background-color: blue;
   color: white;

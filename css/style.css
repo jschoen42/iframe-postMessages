@@ -54,5 +54,27 @@ footer {
   color: white;
   text-align: center;
   height: 50px;
+
+  gap: 1rem
 }
 
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: grey;
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 4px 15px 6px 15px;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+}

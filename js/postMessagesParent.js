@@ -5,14 +5,14 @@ const iframe = document.getElementById('iframe');
 
 // Send message to iframe
 
-function sendMessageToIframe( message ) {
+function sendMessageToChild( message ) {
   const myMessage = {
     message: message,
     timestamp: new Date().toISOString()
   }
 
   iframe.contentWindow.postMessage(myMessage, child_domain);
-  console.log("send message to child", myMessage);
+  // console.log("send message to child", myMessage);
 }
 
 // Receive message from iframe

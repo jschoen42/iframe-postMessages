@@ -10,7 +10,7 @@ function sendMessageToParent( message ) {
   }
 
   parent.postMessage(myMessage, parent_domain);
-  console.log("send message to parent2, event.data");
+  // console.log("send message to parent2, event.data");
 }
 
 // Receive message from parent
@@ -20,5 +20,6 @@ window.addEventListener('message', function(event) {
     return;
   }
 
-  console.log(`from parent -> event.data`, event.data)
+  console.log("from parent -> event.data", event.data)
+  alert( event.data.message )
 }, false);
