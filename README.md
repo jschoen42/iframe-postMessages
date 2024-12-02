@@ -14,6 +14,7 @@ http://vendor.test/ ... /main.html
 http://tutorial.test/ ... /iframe.html
 ```
 
-footer => "Click me": parent to child
-
+```bash
+"Click me" (footer): parent to child
 "Click me message": child to parent
+```
