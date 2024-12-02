@@ -1,5 +1,5 @@
-const child_domain  = "http://tutorial.test";
-const parent_domain = "http://vendor.test";
+const parent_domain = "http://test-parent.com";
+const child_domain  = "http://test-child.com";
 
 const iframe = document.getElementById('iframe');
 

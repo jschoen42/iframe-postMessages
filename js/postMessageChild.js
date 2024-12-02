@@ -1,5 +1,5 @@
-const child_domain  = "http://tutorial.test";
-const parent_domain = "http://vendor.test";
+const parentDomain = "http://test-parent.com";
+const childDomain  = "http://test-child.com";
 
 // Send message to parent
 
@@ -9,14 +9,14 @@ function sendMessageToParent( message ) {
     timestamp: new Date().toISOString()
   }
 
-  parent.postMessage(myMessage, parent_domain);
+  parent.postMessage(myMessage, parentDomain);
   // console.log("send message to parent2, event.data");
 }
 
 // Receive message from parent
 
 window.addEventListener('message', function(event) {
-  if ( new URL(event.origin).host != new URL(parent_domain).host ) {
+  if ( new URL(event.origin).host != new URL(parentDomain).host ) {
     return;
   }
 

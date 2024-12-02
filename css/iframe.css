@@ -1,11 +1,9 @@
 html {
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 body {
-  position: absolute;
-  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: cyan;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .content {
@@ -13,8 +11,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 100%;
+
   background-color: darkgrey;
 }
 
@@ -23,25 +21,23 @@ header {
   justify-content: center;  
   align-items: center;
 
-  font-weight: 600;
-
   width: 100%;
-  background-color: blue;
-  color: white;
-  text-align: center;
-
   padding: 4px 10px 5px 10px;
+
+  text-align: center;
+  font-weight: 600;
+  color: white;
+
+  background-color: blue;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 20px 30px;
 
-  align-items: center;
   flex: auto;
-  width: 100%;
-  height: 100%;
   background-color: yellow;
 
   gap: 10px;
@@ -50,38 +46,41 @@ main {
 .buttonWrapper {
   display: flex;
   gap: 20px;
-
 }
+
 button {
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  background-color: grey;
-  color: white;
+
+  padding: 4px 15px 6px 15px;
   text-align: center;
+  color: white;
+
   border: 2px solid white;
   border-radius: 4px;
-  padding: 4px 15px 6px 15px;
+  background-color: grey;
 
   transition: all 0.3s;
-  cursor: pointer;
 }
 
 button:hover {
-  background-color: blue;
   color: white;
+  background-color: blue;
 }
 
 footer {
+  width: 100%;
+  padding: 4px 10px 5px 10px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  background-color: green;
-  color: white;
   text-align: center;
+  color: white;
 
-  padding: 4px 10px 5px 10px;
+  background-color: green;
 }
