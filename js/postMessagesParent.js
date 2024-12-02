@@ -1,5 +1,5 @@
-const parent_domain = "http://test-parent.com";
-const child_domain  = "http://test-child.com";
+const parentDomain = "http://test-parent.com";
+const childDomain  = "http://test-child.com";
 
 const iframe = document.getElementById('iframe');
 
@@ -11,14 +11,14 @@ function sendMessageToChild( message ) {
     timestamp: new Date().toISOString()
   }
 
-  iframe.contentWindow.postMessage(myMessage, child_domain);
+  iframe.contentWindow.postMessage(myMessage, childDomain);
   // console.log("send message to child", myMessage);
 }
 
 // Receive message from iframe
 
 window.addEventListener('message', function(event) {
-  if ( new URL(event.origin).host != new URL(child_domain).host ) {
+  if ( new URL(event.origin).host != new URL(childDomain).host ) {
     return;
   }
 
