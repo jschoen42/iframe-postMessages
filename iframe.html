@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/iframe.css" />
+
+    <script defer src="js/postMessageChild.js"></script>
+  </head>
+
+  <script>
+    function doClickOne( that ) {
+      let url = "";
+      
+      try {
+        url = parent.location.href;
+      }
+      catch( err ) {
+        console.warn( err );
+      }
+      
+      if (url != "") {
+        console.info(`parent ${url}`);
+
+        parent.doClick( "hallo from iframe");
+      }
+    }
+
+    function doClickTwo( that ) {
+      alert( "I am the iframe");
+    }
+
+    function doClickMessage( that ) {
+      sendMessageToParent("hallo from iframe");
+    }
+
+</script>
+  <style>
+
+  </style>
+  <body class="content">
+    <header>
+      ÄÖÜ Inner Header gj
+    </header>
+    <main>
+      <section>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae voluptas quod ad impedit beatae! Sunt, dolorum! Suscipit sequi blanditiis distinctio non eveniet quas ut dolor repudiandae mollitia. Voluptas, sequi cumque?
+      </section>
+      <section>	
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto hic explicabo blanditiis ratione pariatur, vel sint officia, exercitationem eveniet eum quidem, facere numquam harum esse porro vitae soluta necessitatibus? Ipsa.
+      </section>
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque rerum hic sit accusamus est, odio a veniam in quos numquam placeat mollitia officiis officia aliquid distinctio expedita reprehenderit at! Doloremque, voluptas.
+      </section>
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque rerum hic sit accusamus est, odio a veniam in quos numquam placeat mollitia officiis officia aliquid distinctio expedita reprehenderit at! Doloremque, voluptas.
+      </section>
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque rerum hic sit accusamus est, odio a veniam in quos numquam placeat mollitia officiis officia aliquid distinctio expedita reprehenderit at! Doloremque, voluptas.
+      </section>
+      <div class="buttonWrapper">
+        <button onclick="doClickOne(this)">Click me -> parent</button>
+        <button onclick="doClickTwo(this)">Click me</button>
+        <button onclick="doClickMessage(this)">Click me -> message</button>
+      </div>
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque rerum hic sit accusamus est, odio a veniam in quos numquam placeat mollitia officiis officia aliquid distinctio expedita reprehenderit at! Doloremque, voluptas.
+      </section>
+      <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores atque rerum hic sit accusamus est, odio a veniam in quos numquam placeat mollitia officiis officia aliquid distinctio expedita reprehenderit at! Doloremque, voluptas.
+      </section>
+
+    </main>
+    <footer>
+      ÄÖÜ Inner Footer gj
+    </footer>
+  </body>
+</html>
